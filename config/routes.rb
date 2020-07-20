@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/new'
+  get 'users/index'
+  get 'users/show'
   get 'pages/home'
   get 'pages/login'
   get 'pages/profile'
