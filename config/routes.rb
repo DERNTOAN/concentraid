@@ -1,18 +1,12 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  # get 'home', to: 'pages#home', as: :home
+  get 'rules', to: 'pages#rules', as: :rules
+  get 'about', to: 'pages#about', as: :about
+  get 'contact', to: 'pages#contact', as: :contact
+  get 'legal', to: 'pages#legal', as: :legal
   get 'users/index'
   get 'users/show'
-  get 'pages/home'
-  get 'pages/login'
-  get 'pages/profile'
-  get 'pages/calendar'
-  get 'pages/video'
-  get 'pages/rules'
-  get 'pages/about'
-  get 'pages/contact'
-  get 'pages/legal'
   devise_for :users
-  root to: "pages#index"
-  get 'pages/index'
+  root to: "pages#home"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
